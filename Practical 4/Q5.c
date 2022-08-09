@@ -11,7 +11,7 @@ int main() {
 		scanf("%d", &num);
 		sum += num;
 	}
-	printf("The average of the given numbers is: %lf\n", sum / 10.0);
+	printf("The average of the given numbers is %lf\n", sum / 10.0);
 	return 0;
 }
 
@@ -26,5 +26,5 @@ Output: Enter the 1th number: 45
 		Enter the 8th number: 91
 		Enter the 9th number: 43
 		Enter the 10th number: 72
-		The average of the given numbers is: 63.400000
+		The average of the given numbers is 63.400000
 */

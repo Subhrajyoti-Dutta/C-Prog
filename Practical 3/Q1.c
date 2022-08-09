@@ -39,9 +39,9 @@ NEXT:
 	count--;
 	if (count > 0)
 		goto NEXT;
-	printf("The average price (in 1000s) is: %lf\n", sum / 10.0);
-	printf("The minimum price (in 1000s) is: %lf\n", min);
-	printf("The maximum price (in 1000s) is: %lf\n", max);
+	printf("The average price (in 1000s) is %lf\n", sum / 10.0);
+	printf("The minimum price (in 1000s) is %lf\n", min);
+	printf("The maximum price (in 1000s) is %lf\n", max);
 	return 0;
 }
 
@@ -56,7 +56,7 @@ Output: Enter the price of PC: 35.00
 		Enter the price of next PC: 29.00
 		Enter the price of next PC: 53.45
 		Enter the price of next PC: 62.50
-		The average price (in 1000s) is: 41.850000
-		The minimum price (in 1000s) is: 25.000000
-		The maximum price (in 1000s) is: 68.150000
+		The average price (in 1000s) is 41.850000
+		The minimum price (in 1000s) is 25.000000
+		The maximum price (in 1000s) is 68.150000
 */
