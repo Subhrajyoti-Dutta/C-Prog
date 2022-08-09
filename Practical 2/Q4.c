@@ -15,7 +15,7 @@ int main() {
 	x = y;
 	y = z;
 	z = placeHolder;
-	printf("After rotation the values were:\n");
+	printf("After rotation the values are:\n");
 	printf("\tx = %d, y = %d, z = %d\n", x, y, z);
 	return 0;
 }
@@ -23,6 +23,6 @@ int main() {
 /*
 Output: Before rotation the values were:
 				x = 3, y = 7, z = 90
-		After rotation the values were:
+		After rotation the values are:
 				x = 7, y = 90, z = 3
 */
