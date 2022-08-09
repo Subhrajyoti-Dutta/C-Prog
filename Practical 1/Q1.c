@@ -1,10 +1,10 @@
 /*
 Question: Write a program to read three va;lues using scanf
 	function and print the following result:
-		i. Sum of the values.
-		ii. Average of the values.
+		i.   Sum of the values.
+		ii.  Average of the values.
 		iii. Largest of the values.
-		iv. Smallest of the values.
+		iv.  Smallest of the values.
 */
 
 #include <stdio.h>
