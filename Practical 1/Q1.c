@@ -29,14 +29,14 @@ int main() {
 	if (num2 > max)
 		max = num2;
 	if (num3 > max)
-		max = num2;
+		max = num3;
 
 	printf("Max of the values is %d\n", max);
 	
 	if (num2 < min)
 		min = num2;
 	if (num3 < min)
-		min = num2;
+		min = num3;
 
 	printf("Min of the values is %d\n", min);
 
