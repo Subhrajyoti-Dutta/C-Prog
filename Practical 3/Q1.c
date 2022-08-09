@@ -39,8 +39,8 @@ NEXT:
 	count--;
 	if (count > 0)
 		goto NEXT;
-	printf("The average price is: %lf\n", sum / 10.0);
-	printf("The minimum price is: %lf\n", min);
-	printf("The maximum price is: %lf\n", max);
+	printf("The average price (in 1000s) is: %lf\n", sum / 10.0);
+	printf("The minimum price (in 1000s) is: %lf\n", min);
+	printf("The maximum price (in 1000s) is: %lf\n", max);
 	return 0;
 }

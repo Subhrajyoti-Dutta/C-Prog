@@ -20,3 +20,11 @@ int main() {
 	}
 	return 0;
 }
+
+/*
+Output: Enter the number: 1245 
+		1245
+		245
+		45
+		5
+*/

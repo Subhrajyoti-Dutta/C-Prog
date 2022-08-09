@@ -15,6 +15,11 @@ int main() {
 		sum += num % 10;
 		num /= 10;
 	}
-	printf("The sum of the digits are: %d", sum);
+	printf("The sum of the digits are: %d\n", sum);
 	return 0;
 }
+
+/*
+Output: Enter the number: 4878
+		The sum of the digits are: 27
+*/

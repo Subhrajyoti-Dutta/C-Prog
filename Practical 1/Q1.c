@@ -33,6 +33,8 @@ int main() {
 
 	printf("Max of the values is %d\n", max);
 	
+	//Printing min
+	
 	if (num2 < min)
 		min = num2;
 	if (num3 < min)

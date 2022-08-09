@@ -11,9 +11,14 @@ int main() {
 	scanf("%d", &num);
 
 	if (num % 2 == 0)
-		printf("%d is even", num);
+		printf("%d is even\n", num);
 	else
-		printf("%d is odd", num);
+		printf("%d is odd\n", num);
 
 	return 0;
 }
+
+/*
+Output: Enter the number: 1542
+        1542 is even
+*/

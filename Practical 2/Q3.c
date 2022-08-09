@@ -13,3 +13,8 @@ int main() {
 	printf("The two right most digit in integer part is: %d\n", intPart%100);
 	return 0;
 }
+
+/*
+Output: Write a floating point number: 1245.326
+		The two right most digit in integer part is: 45
+*/

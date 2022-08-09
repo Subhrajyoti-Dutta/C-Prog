@@ -19,3 +19,10 @@ int main() {
 	printf("\tx = %d, y = %d, z = %d\n", x, y, z);
 	return 0;
 }
+
+/*
+Output: Before rotation the values were:
+				x = 3, y = 7, z = 90
+		After rotation the values were:
+				x = 7, y = 90, z = 3
+*/
