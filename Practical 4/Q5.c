@@ -1,25 +1,30 @@
 /*
-Question: Write a program to print the reverse of a number.
-		For example: [In]: 123 [Out]: 321
+Question: Write a program to calculate the mean of 10 numbers;
 */
 
 #include <stdio.h>
 
 int main() {
-	int num;
-	printf("Enter the number: ");
-	scanf("%d", &num);
-	int temp = num;
-	int reverse = 0;
-	while (temp != 0) {
-		reverse = reverse * 10 + temp % 10;
-		temp /= 10;
+	int sum = 0, num;
+	for (int i = 1; i <= 10; i++) {
+		printf("Enter the %dth number: ", i);
+		scanf("%d", &num);
+		sum += num;
 	}
-	printf("The reverse of %d is %d\n", num, reverse);
+	printf("The average of the given numbers is: %lf\n", sum / 10.0);
 	return 0;
 }
 
 /*
-Output: Enter the number: 6532
-		The reverse of 6532 is 2356
+Output: Enter the 1th number: 45
+		Enter the 2th number: 12
+		Enter the 3th number: 89
+		Enter the 4th number: 63
+		Enter the 5th number: 74
+		Enter the 6th number: 63
+		Enter the 7th number: 82
+		Enter the 8th number: 91
+		Enter the 9th number: 43
+		Enter the 10th number: 72
+		The average of the given numbers is: 63.400000
 */

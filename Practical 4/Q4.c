@@ -1,22 +1,25 @@
 /*
-Question: Write a program to output the
-		fibonacci series till 20 terms
+Question: Write a program to calculate factorial of a number provided by the user
 */
 
 #include <stdio.h>
 
 int main() {
-	int a = 0, b = 1, c;
-	for (int i = 0; i < 20; i++) {
-		printf("%d ", a);
-		c = a + b;
-		a = b;
-		b = c;
+	int num;
+	printf("Enter the number: ");
+	scanf("%d", &num);
+	int fact = 1;
+	for (int i = 2; i <= num; i++) {
+		fact *= i;
 	}
-	printf("\n");
+	printf("The factorial of %d is %d\n", num, fact);
 	return 0;
 }
 
 /*
-Output: 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181
+Output 1:   Enter the number: 10
+			The factorial of 10 is 3628800
+
+Output 2:   Enter the number: 7
+			The factorial of 7 is 5040
 */

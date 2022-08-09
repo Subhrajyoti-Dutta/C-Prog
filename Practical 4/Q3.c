@@ -1,30 +1,30 @@
 /*
-Question: Write a program to calculate the mean of 10 numbers;
+Question: Write a program to output the following pattern:
+		1
+		2  3
+		4  5  6
+		7  8  9  10
+		11 12 13 14 15
 */
 
 #include <stdio.h>
 
 int main() {
-	int sum = 0, num;
-	for (int i = 1; i <= 10; i++) {
-		printf("Enter the %dth number: ", i);
-		scanf("%d", &num);
-		sum += num;
+	int temp = 1;
+	for (int i = 0; i < 5; i++) {
+		for (int j = 0; j <= i; j++) {
+			printf("%d ", temp);
+			temp++;
+		}
+		printf("\n");
 	}
-	printf("The average of the given numbers is: %lf\n", sum / 10.0);
 	return 0;
 }
 
 /*
-Output: Enter the 1th number: 45
-		Enter the 2th number: 12
-		Enter the 3th number: 89
-		Enter the 4th number: 63
-		Enter the 5th number: 74
-		Enter the 6th number: 63
-		Enter the 7th number: 82
-		Enter the 8th number: 91
-		Enter the 9th number: 43
-		Enter the 10th number: 72
-		The average of the given numbers is: 63.400000
+Output: 1
+		2 3
+		4 5 6
+		7 8 9 10
+		11 12 13 14 15
 */
