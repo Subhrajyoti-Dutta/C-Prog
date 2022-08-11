@@ -1,6 +1,5 @@
 /*
-Question: Write a program to output the
-		fibonacci series till 20 terms
+Question: Write a program to output the fibonacci series till 20 terms
 */
 
 #include <stdio.h>

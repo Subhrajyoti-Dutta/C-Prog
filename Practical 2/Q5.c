@@ -4,7 +4,7 @@ Question: Write a program that reads a 4 digit number
 		8765
 		765
 		65
-        5
+		5
 */
 
 #include <stdio.h>
@@ -22,7 +22,7 @@ int main() {
 }
 
 /*
-Output: Enter the number: 1245 
+Output: Enter the number: 1245
 		1245
 		245
 		45

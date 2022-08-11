@@ -1,5 +1,6 @@
 /*
-Question: Write a program to make a simple calculator using switch statement.
+Question: Write a program to make a simple
+		calculator using switch statement.
 */
 
 #include <stdio.h>
@@ -7,30 +8,30 @@ Question: Write a program to make a simple calculator using switch statement.
 int main() {
 	int num1, num2, result;
 	char op;
-	
+
 	printf("Enter two numbers separated by space: ");
 	scanf("%d %d", &num1, &num2);
 	printf("Enter an operator: ");
 	scanf(" %c", &op);
-	
+
 	switch (op) {
-		case '+':
-			result = num1 + num2;
-			break;
-		case '-':
-			result = num1 - num2;
-			break;
-		case '*':
-			result = num1 * num2;
-			break;
-		case '/':
-			result = num1 / num2;
-			break;
-		default:
-			printf("Invalid operator");
-			return 0;
+	case '+':
+		result = num1 + num2;
+		break;
+	case '-':
+		result = num1 - num2;
+		break;
+	case '*':
+		result = num1 * num2;
+		break;
+	case '/':
+		result = num1 / num2;
+		break;
+	default:
+		printf("Invalid operator");
+		return 0;
 	}
-	
+
 	printf("%d %c %d = %d\n", num1, op, num2, result);
 	return 0;
 }

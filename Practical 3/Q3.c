@@ -29,7 +29,7 @@ int main() {
 	printf("\nBy method 2:\n");
 
 	if (num1 < num2) {
-		if (num2 < num3) 
+		if (num2 < num3)
 			max2 = num3;
 		else
 			max2 = num2;
@@ -40,22 +40,19 @@ int main() {
 		else
 			max2 = num1;
 	}
-	
+
 	printf("The max value by method 2 is %d\n", max2);
 
 	//Method 3
 	printf("\nBy method 3:\n");
 
-	if (num1 > num2 && num1 > num3) {
+	if (num1 > num2 && num1 > num3)
 		max3 = num1;
-	}
-	else if (num2 > num1 && num2 > num3) {
+	else if (num2 > num1 && num2 > num3)
 		max3 = num2;
-	}
-	else {
+	else
 		max3 = num3;
-	}
-	
+
 	printf("The max value by method 3 is %d\n", max3);
 	return 0;
 }
