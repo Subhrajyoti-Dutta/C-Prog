@@ -19,9 +19,9 @@ int main() {
 	double theta = 3;
 	int sampleSize = 100;
 
-	for (int i = 0; i < sampleSize; i++) {
+	for (int i = 1; i <= sampleSize; i++) {
 		t = myRound(genUnif(0, theta), 2);
-		printf("%2d %5.2lf\n", i, t);
+		printf("%3d %5.2lf\n", i, t);
 		sum += t;
 	}
 	double xbar = sum / sampleSize;
