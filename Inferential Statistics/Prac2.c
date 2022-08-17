@@ -34,7 +34,7 @@ int main() {
 	printf("E[X] = %lf\n\n", E_x);
 
 	printf("At %d%% margin of error: %.2lf\n", CI, MoE);
-	printf("|θ/2 - x̄| = %lf\n\n", fabs(E_x - xbar));
+	printf("|1/λ - x̄| = %lf\n\n", fabs(E_x - xbar));
 
 	printf("Confidence interval: [ %lf , %lf ]\n", E_x - MoE, E_x + MoE);
 }
