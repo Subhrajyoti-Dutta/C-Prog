@@ -24,12 +24,10 @@ int main() {
 	mean = sum / 10;
 	min = max = arr[0];
 	for (int i = 0; i < 10; i++) {
-		if (arr[i] < min) {
+		if (arr[i] < min)
 			min = arr[i];
-		}
-		if (arr[i] > max) {
+		if (arr[i] > max)
 			max = arr[i];
-		}
 	}
 	sd = sqrt(ss / 10 - pow(mean, 2));
 	range = max - min;
