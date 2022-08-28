@@ -35,5 +35,5 @@ int main() {
 
 /*
 Output:
-        The best fitting line is: GL = 0.385225 * Age + 65.141572
+        The equation of line of regression is: GL = 0.385225 * Age + 65.141572
 */
