@@ -2,7 +2,7 @@
 #include <math.h>
 
 int main() {
-    double a, b, c, D;
+    double a, b, c, D, k;
     printf("Enter the coefficients in ax^2 + bx + c = 0:\n");
     printf("a: ");
     scanf("%lf", &a);
