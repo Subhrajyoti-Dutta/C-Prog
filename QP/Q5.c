@@ -1,10 +1,6 @@
 #include <stdio.h>
 #include <math.h>
 
-double Det(double a, double b, double c) {
-    return pow(b, 2) - 4 * a * c;
-}
-
 int main() {
     double a, b, c, D;
     printf("Enter the coefficients in ax^2 + bx + c = 0:\n");
