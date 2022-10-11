@@ -7,8 +7,6 @@ Question: Write a program for t-test for
 */
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include <math.h>
 
 double mean(double arr[], int len) {
