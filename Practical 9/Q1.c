@@ -8,35 +8,28 @@ Question: Write a program to calculate
 
 #include <stdio.h>
 #include <math.h>
-#include <stdlib.h>
 
 double mean(int arr[], int len) {
     double mu = 0;
-    for (int i = 0; i < len; i++) {
+    for (int i = 0; i < len; i++)
         mu += arr[i];
-    }
-    mu /= len;
-    return mu;
+    return mu / len;
 }
 
 double stddev(int arr[], int len) {
     double mu = mean(arr, len);
     double sigma = 0;
-    for (int i = 0; i < len; i++) {
+    for (int i = 0; i < len; i++)
         sigma += pow(arr[i] - mu, 2);
-    }
-    sigma = sqrt(sigma / len);
-    return sigma;
+    return sqrt(sigma / len);
 }
 
 double meandev(int arr[], int len) {
     double mu = mean(arr, len);
     double md = 0;
-    for (int i = 0; i < len; i++) {
+    for (int i = 0; i < len; i++)
         md += fabs(arr[i] - mu);
-    }
-    md /= len;
-    return md;
+    return md / len;
 }
 
 int main() {
@@ -44,9 +37,8 @@ int main() {
     printf("Enter the number of elements: ");
     scanf("%d", &len);
     printf("Enter %d numbers: ", len);
-    for (int i = 0; i < len; i++) {
+    for (int i = 0; i < len; i++)
         scanf("%d", &list[i]);
-    }
     printf("Mean = %lf\n", mean(list, len));
     printf("Std dev = %lf\n", stddev(list, len));
     printf("Mean dev = %lf\n", meandev(list, len));
