@@ -44,7 +44,7 @@ double t_test(double arr1[], double arr2[], int len) {
 }
 
 int main() {
-    double nums1[1000], nums2[1000];
+    double nums1[1000], nums2[1000], con90, con95, con99, t_val;
     int noe;
     printf("Enter the number of pair of elements: ");
     scanf("%d", &noe);
@@ -56,8 +56,24 @@ int main() {
     for (int i = 0; i < noe; i++) {
         scanf("%lf", &nums2[i]);
     }
+    printf("Enter the tabulated t-value at %ddof at 90%% confidence: ", noe - 2);
+    scanf("%lf", &con90);
+    printf("Enter the tabulated t-value at %ddof at 95%% confidence: ", noe - 2);
+    scanf("%lf", &con95);
+    printf("Enter the tabulated t-value at %ddof at 99%% confidence: ", noe - 2);
+    scanf("%lf", &con99);
+    t_val = t_test(nums1, nums2, noe);
 
-    printf("The value of t-test at %d dof is %lf", noe - 2, t_test(nums1, nums2, noe));
+    printf("The value of t-test at %d dof is %lf", noe - 2, t_val);
+    if (con90 > t_val)
+        printf("It is accepted at 90%% confidence");
+    else if (con95 > t_val)
+        printf("It is accepted at 95%% confidence");
+    else if (con99 > t_val)
+        printf("It is accepted at 99%% confidence");
+    else
+        printf("It is rejected at all level");
+    return 0;
 }
 
 /*
