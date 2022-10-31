@@ -8,12 +8,12 @@ double mean(int arr[], int len) {
     return mu / len;
 }
 
-double stddev(int arr[], int len) {
+double var(int arr[], int len) {
     double mu = mean(arr, len);
     double sigma = 0;
     for (int i = 0; i < len; i++)
         sigma += pow(arr[i] - mu, 2);
-    return sqrt(sigma / len);
+    return sigma / len;
 }
 
 void sort(int arr[], int len) {
@@ -44,7 +44,7 @@ int main() {
         scanf("%d", &list[i]);
     sort(list, len);
     printf("Mean = %lf\n", mean(list, len));
-    printf("Std dev = %lf\n", stddev(list, len));
+    printf("Var = %lf\n", var(list, len));
     printf("Median = %lf\n", median(list, len));
     return 0;
 }
