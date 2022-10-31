@@ -24,6 +24,5 @@ int main() {
     }
     m = (n * sxiyi - sxi * syi) / (n * sxi2 - sxi * sxi);
     c = (syi * sxi2 - sxi * sxiyi) / (n * sxi2 - sxi * sxi);
-    printf("The best fitting line is: ");
-    printf("y = %lfx + %lf\n", m, c);
+    printf("The regression line is: y = %lfx + %lf\n", m, c);
 }
