@@ -31,9 +31,8 @@ int main() {
     printf("Enter the number of elements: ");
     scanf("%d", &noe);
     printf("Enter the elements: ");
-    for (int i = 0; i < noe; i++) {
+    for (int i = 0; i < noe; i++)
         scanf("%lf", &nums[i]);
-    }
     printf("Enter t-value at %ddof at 90%% confidence: ", noe - 1);
     scanf("%lf", &con90);
     printf("Enter t-value at %ddof at 95%% confidence: ", noe - 1);
