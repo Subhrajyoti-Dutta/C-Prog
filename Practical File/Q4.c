@@ -32,7 +32,7 @@ double corr(double arr1[], double arr2[], int len) {
 }
 
 int main() {
-    double nums1[1000], nums2[1000], con90, con95, con99, r_val;
+    double nums1[1000], nums2[1000], r_val;
     int noe;
     printf("Enter the number of pair of elements: ");
     scanf("%d", &noe);

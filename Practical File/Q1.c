@@ -3,11 +3,11 @@
 
 int main() {
     int n;
-    printf("Enter the the number of elements: ");
+    printf("Enter the number of elements: ");
     scanf("%d", &n);
     double x = 0, x_2 = 0, t;
     for (int i = 0; i < n; i++) {
-        printf("Enter %dth the number: ", i);
+        printf("Enter %dth number: ", i);
         scanf("%lf", &t);
         x += t;
         x_2 += pow(t, 2);
