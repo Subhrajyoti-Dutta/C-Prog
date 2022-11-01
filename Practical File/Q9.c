@@ -30,7 +30,7 @@ double f_test(double arr1[], int len1, double arr2[], int len2) {
 }
 
 int main() {
-    double nums1[1000], nums2[1000];
+    double nums1[1000], nums2[1000], con90, con95, con99, f_val;
     int noe1, noe2;
     printf("Enter the number of elements in first group: ");
     scanf("%d", &noe1);
@@ -46,6 +46,22 @@ int main() {
         scanf("%lf", &nums2[i]);
     }
 
-    printf("The value of f-test at (%d, %d) dof is %lf", noe1 - 1, noe2 - 1, f_test(nums1, noe1, nums2, noe2));
+    printf("Enter f-value at (%d, %d) dof at 90%% confidence: ", noe1 - 1, noe2 - 1);
+    scanf("%lf", &con90);
+    printf("Enter f-value at (%d, %d) dof at 95%% confidence: ", noe1 - 1, noe2 - 1);
+    scanf("%lf", &con95);
+    printf("Enter f-value at (%d, %d) dof at 99%% confidence: ", noe1 - 1, noe2 - 1);
+    scanf("%lf", &con99);
+
+    f_val = f_test(nums1, noe1, nums2, noe2);
+    printf("The value of f-test at (%d, %d) dof is %lf", noe1 - 1, noe2 - 1, f_val);
+    if (con90 > f_val)
+        printf("It is accepted at 90%% confidence");
+    else if (con95 > f_val)
+        printf("It is accepted at 95%% confidence");
+    else if (con99 > f_val)
+        printf("It is accepted at 99%% confidence");
+    else
+        printf("It is rejected at all level");
     return 0;
 }

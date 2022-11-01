@@ -3,17 +3,15 @@
 
 double mean(double arr[], int len) {
     double xbar = 0;
-    for (int i = 0; i < len; i++) {
+    for (int i = 0; i < len; i++)
         xbar += arr[i];
-    }
     return xbar / len;
 }
 
 double sum_of_sqr(double arr[], int len) {
     double ss = 0, xbar = mean(arr, len);
-    for (int i = 0; i < len; i++) {
+    for (int i = 0; i < len; i++)
         ss += pow(arr[i] - xbar, 2);
-    }
     return ss;
 }
 
@@ -32,17 +30,15 @@ int main() {
     printf("Enter the number of elements in first group: ");
     scanf("%d", &noe1);
     printf("Enter the elements in first group: ");
-    for (int i = 0; i < noe1; i++) {
+    for (int i = 0; i < noe1; i++)
         scanf("%lf", &nums1[i]);
-    }
     printf("Enter the pop mean for second group: ");
     scanf("%lf", &mu2);
     printf("Enter the number of elements in second group: ");
     scanf("%d", &noe2);
     printf("Enter the elements in second group: ");
-    for (int i = 0; i < noe2; i++) {
+    for (int i = 0; i < noe2; i++)
         scanf("%lf", &nums2[i]);
-    }
     printf("Enter the tabulated t-value at %ddof at 90%% confidence: ", noe1 + noe2 - 2);
     scanf("%lf", &con90);
     printf("Enter the tabulated t-value at %ddof at 95%% confidence: ", noe1 + noe2 - 2);
@@ -62,18 +58,3 @@ int main() {
         printf("It is rejected at all level");
     return 0;
 }
-
-/*
-Output:
-    Enter the pop mean for first group: 330
-    Enter the number of elements in first group: 12
-    Enter the elements in first group: 25 32 30 34 24 14 32 24 30 31 35 25
-    Enter the pop mean for second group: 450
-    Enter the number of elements in second group: 15
-    Enter the elements in second group: 44 34 22 10 47 31 40 30 32 35 18 21 35 29 22
-    Enter the tabulated t-value at 25dof at 90% confidence: 1.316
-    Enter the tabulated t-value at 25dof at 95% confidence: 1.708
-    Enter the tabulated t-value at 25dof at 99% confidence: 2.485
-    The value of t-test at 25 dof is 36.006414
-    It is rejected at all level
-*/
