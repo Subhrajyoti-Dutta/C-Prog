@@ -48,11 +48,11 @@ int main() {
     for (int i = 0; i < noe; i++) {
         scanf("%lf", &nums2[i]);
     }
-    printf("Enter the tabulated t-value at %ddof at 90%% confidence: ", noe - 2);
+    printf("Enter t-value at %ddof at 90%% confidence: ", noe - 2);
     scanf("%lf", &con90);
-    printf("Enter the tabulated t-value at %ddof at 95%% confidence: ", noe - 2);
+    printf("Enter t-value at %ddof at 95%% confidence: ", noe - 2);
     scanf("%lf", &con95);
-    printf("Enter the tabulated t-value at %ddof at 99%% confidence: ", noe - 2);
+    printf("Enter t-value at %ddof at 99%% confidence: ", noe - 2);
     scanf("%lf", &con99);
     t_val = t_test(nums1, nums2, noe);
 
@@ -73,9 +73,9 @@ Output:
     Enter the number of pair of elements: 6
     Enter the x values of the pairs: 43 21 25 42 57 59
     Enter the y values of the pairs: 99 65 79 75 87 81
-    Enter the tabulated t-value at 4dof at 90% confidence: 2.132
-    Enter the tabulated t-value at 4dof at 95% confidence: 2.776
-    Enter the tabulated t-value at 4dof at 99% confidence: 4.604
+    Enter t-value at 4dof at 90% confidence: 2.132
+    Enter t-value at 4dof at 95% confidence: 2.776
+    Enter t-value at 4dof at 99% confidence: 4.604
     The value of t-test at 4 dof is 1.249377
     It is accepted at 90% confidence
 */
