@@ -54,7 +54,7 @@ int main() {
     scanf("%lf", &con99);
 
     f_val = f_test(nums1, noe1, nums2, noe2);
-    printf("The value of f-test at (%d, %d) dof is %lf", noe1 - 1, noe2 - 1, f_val);
+    printf("The value of f-test at (%d, %d) dof is %lf\n", noe1 - 1, noe2 - 1, f_val);
     if (con90 > f_val)
         printf("It is accepted at 90%% confidence");
     else if (con95 > f_val)
@@ -65,3 +65,15 @@ int main() {
         printf("It is rejected at all level");
     return 0;
 }
+
+/*Output:
+    Enter the number of elements in first group: 6
+    Enter the elements in first group: 43 21 25 42 57 59
+    Enter the number of elements in second group: 6
+    Enter the elements in second group: 99 65 79 75 87 81
+    Enter f-value at (5, 5) dof at 90% confidence: 3.452
+    Enter f-value at (5, 5) dof at 95% confidence: 5.050
+    Enter f-value at (5, 5) dof at 99% confidence: 10.967
+    The value of f-test at (5, 5) dof is 1.891514
+    It is accepted at 90% confidence
+*/

@@ -53,3 +53,16 @@ int main() {
         printf("It is rejected at all level");
     return 0;
 }
+
+/*Output:
+    Enter the number of x attri(#rows): 2
+    Enter the number of y attri(#cols): 3
+    Enter the data in matrix form:
+    213 203 182
+    138 110 154
+    Enter chi2-value at 2dof at 90% confidence: 4.605
+    Enter chi2-value at 2dof at 95% confidence: 5.991
+    Enter chi2-value at 2dof at 99% confidence: 9.210
+    The value of chi2-test at 2dof is 7.878212
+    It is accepted at 99% confidence
+*/
