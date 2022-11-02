@@ -7,14 +7,14 @@ int main() {
     gets(str1);
     printf("Enter the String 2: ");
     gets(str2);
-    int len1 = 0, j = 0;
-    while (str1[len1] != '\0') {
-        len1++;
+    int i = 0, j = 0;
+    while (str1[i] != '\0') {
+        i++;
     }
     while (str2[j] != '\0') {
-        str1[len1 + j] = str2[j];
+        str1[i + j] = str2[j];
         j++;
     }
-    str1[len1 + j] = '\0';
+    str1[i + j] = '\0';
     printf("%s", str1);
 }

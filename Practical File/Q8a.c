@@ -51,3 +51,16 @@ int main() {
         printf("It is rejected at all level");
     return 0;
 }
+
+
+/*
+Output:
+    Enter the mu: 100
+    Enter the number of elements: 10
+    Enter the elements: 70 120 110 101 88 83 95 98 107 100
+    Enter t-value at 9dof at 90% confidence: 1.397
+    Enter t-value at 9dof at 95% confidence: 1.860
+    Enter t-value at 9dof at 99% confidence: 2.895
+    The value of t-test at 9 dof is 0.620336
+    It is accepted at 90% confidence
+*/

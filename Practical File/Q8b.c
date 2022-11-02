@@ -58,3 +58,17 @@ int main() {
         printf("It is rejected at all level");
     return 0;
 }
+/*
+Output:
+    Enter the pop mean for first group: 330
+    Enter the number of elements in first group: 12
+    Enter the elements in first group: 25 32 30 34 24 14 32 24 30 31 35 25
+    Enter the pop mean for second group: 450
+    Enter the number of elements in second group: 15
+    Enter the elements in second group: 44 34 22 10 47 31 40 30 32 35 18 21 35 29 22
+    Enter the tabulated t-value at 25dof at 90% confidence: 1.316
+    Enter the tabulated t-value at 25dof at 95% confidence: 1.708
+    Enter the tabulated t-value at 25dof at 99% confidence: 2.485
+    The value of t-test at 25 dof is 36.006414
+    It is rejected at all level
+*/

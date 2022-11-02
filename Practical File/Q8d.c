@@ -56,7 +56,7 @@ int main() {
     scanf("%lf", &con99);
     t_val = t_test(nums1, nums2, noe);
 
-    printf("The value of t-test at %d dof is %lf", noe - 2, t_val);
+    printf("The value of t-test at %d dof is %lf\n", noe - 2, t_val);
     if (con90 > t_val)
         printf("It is accepted at 90%% confidence");
     else if (con95 > t_val)
@@ -70,4 +70,12 @@ int main() {
 
 /*
 Output:
+    Enter the number of pair of elements: 6
+    Enter the x values of the pairs: 43 21 25 42 57 59
+    Enter the y values of the pairs: 99 65 79 75 87 81
+    Enter the tabulated t-value at 4dof at 90% confidence: 2.132
+    Enter the tabulated t-value at 4dof at 95% confidence: 2.776
+    Enter the tabulated t-value at 4dof at 99% confidence: 4.604
+    The value of t-test at 4 dof is 1.249377
+    It is accepted at 90% confidence
 */

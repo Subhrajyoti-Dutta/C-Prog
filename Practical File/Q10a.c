@@ -19,7 +19,6 @@ int main() {
             scanf("%lf", &table[i][j]);
         }
     }
-    double xMar[10], yMar[10], arrInd[10][10];
     printf("Enter chi2-value at %ddof at 90%% confidence: ", (row - 1) * (col - 1));
     scanf("%lf", &con90);
     printf("Enter chi2-value at %ddof at 95%% confidence: ", (row - 1) * (col - 1));
@@ -27,6 +26,7 @@ int main() {
     printf("Enter chi2-value at %ddof at 99%% confidence: ", (row - 1) * (col - 1));
     scanf("%lf", &con99);
 
+    double xMar[10], yMar[10];
     for (int i = 0; i < row; i++) {
         for (int j = 0; j < col; j++) {
             xMar[i] += table[i][j];
@@ -41,7 +41,6 @@ int main() {
             chi2_val += pow(expected_i_j - table[i][j], 2) / expected_i_j;
         }
     }
-
 
     printf("The value of chi2-test at %ddof is %lf\n", (row - 1) * (col - 1), chi2_val);
     if (con90 > chi2_val)
