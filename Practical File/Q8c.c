@@ -17,37 +17,37 @@ double sum_of_sqr(double arr[], int len) {
     return ss;
 }
 
-double t_test(double arr1[], int len1, double arr2[], int len2) {
-    double xbar1 = mean(arr1, len1);
-    double xbar2 = mean(arr2, len2);
-    double S2 = (sum_of_sqr(arr1, len1) + sum_of_sqr(arr2, len2)) / (len1 + len2 - 2);
-    return fabs(xbar1 - xbar2) / sqrt(S2 * (1.0 / len1 + 1.0 / len2));
+double t_test(double arr1[], double arr2[], int len){
+    double diff[1000];
+    for (int i = 0; i < len; i++)
+        diff[i] = arr1[i] - arr2[i];
+    double dbar = mean(diff, len);
+    double S2   = sum_of_sqr(diff, len) / (len - 1);
+    return fabs(dbar)/sqrt(S2/len);
 }
 
 int main() {
     double nums1[1000], nums2[1000], con90, con95, con99, t_val;
-    int noe1, noe2;
-    printf("Enter the number of elements in first group: ");
-    scanf("%d", &noe1);
+    int noe;
+    printf("Enter the number of pairs of elements: ");
+    scanf("%d", &noe);
     printf("Enter the elements in first group: ");
-    for (int i = 0; i < noe1; i++) {
+    for (int i = 0; i < noe; i++) {
         scanf("%lf", &nums1[i]);
     }
-    printf("Enter the number of elements in second group: ");
-    scanf("%d", &noe2);
     printf("Enter the elements in second group: ");
-    for (int i = 0; i < noe2; i++) {
+    for (int i = 0; i < noe; i++) {
         scanf("%lf", &nums2[i]);
     }
-    printf("Enter the tabulated t-value at %ddof at 90%% confidence: ", noe1 + noe2 - 2);
+    printf("Enter the tabulated t-value at %ddof at 90%% confidence: ", noe - 1);
     scanf("%lf", &con90);
-    printf("Enter the tabulated t-value at %ddof at 95%% confidence: ", noe1 + noe2 - 2);
+    printf("Enter the tabulated t-value at %ddof at 95%% confidence: ", noe - 1);
     scanf("%lf", &con95);
-    printf("Enter the tabulated t-value at %ddof at 99%% confidence: ", noe1 + noe2 - 2);
+    printf("Enter the tabulated t-value at %ddof at 99%% confidence: ", noe - 1);
     scanf("%lf", &con99);
-    t_val = t_test(nums1, noe1, nums2, noe2);
+    t_val = t_test(nums1, nums2, noe);
 
-    printf("The value of t-test at %d dof is %lf\n", noe1 + noe2 - 2, t_test(nums1, noe1, nums2, noe2));
+    printf("The value of t-test at %d dof is %lf\n", noe - 1, t_val);
     if (con90 > t_val)
         printf("It is accepted at 90%% confidence");
     else if (con95 > t_val)
@@ -61,13 +61,12 @@ int main() {
 
 /*
 Output:
-    Enter the number of elements in first group: 12
-    Enter the elements in first group: 25 32 30 34 24 14 32 24 30 31 35 25
-    Enter the number of elements in second group: 15
-    Enter the elements in second group: 44 34 22 10 47 31 40 30 32 35 18 21 35 29 22
-    Enter the tabulated t-value at 25dof at 90% confidence: 1.316
-    Enter the tabulated t-value at 25dof at 95% confidence: 1.708
-    Enter the tabulated t-value at 25dof at 99% confidence: 2.485
-    The value of t-test at 25 dof is 0.610278
-    It is accepted at 90% confidence
+    Enter the number of pairs of elements: 8
+    Enter the elements in first group: 49 53 51 52 47 50 52 53
+    Enter the elements in second group: 52 55 52 53 50 54 54 53
+    Enter the tabulated t-value at 7dof at 90% confidence: 1.415
+    Enter the tabulated t-value at 7dof at 95% confidence: 1.895
+    Enter the tabulated t-value at 7dof at 99% confidence: 2.998
+    The value of t-test at 7 dof is 4.320494
+    It is rejected at all level
 */

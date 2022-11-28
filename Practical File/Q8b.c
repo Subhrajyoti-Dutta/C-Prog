@@ -72,3 +72,5 @@ Output:
     The value of t-test at 25 dof is 36.006414
     It is rejected at all level
 */
+
+//33 12 25 32 30 34 24 14 32 24 30 31 35 25 45 15 44 34 22 10 47 31 40 30 32 35 18 21 35 29 22 1.316 1.708 2.485
